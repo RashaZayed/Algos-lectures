@@ -22,46 +22,26 @@ class SLL {
     }
   }
 
-//   insertLast (value){
-//      let node = new Node(value);
-//      let current;
-//      if(!this.head){
-//          this.head = node;
-//         this.size++;
-//      }else {
-//          current = this.head;
-//          while(current.next){
-//              current = current.next;
-//          }
-//          current.next = node;
-//          this.size++;
-//      }
-
-//   }
-insertLast(value){
+  insertLast(value) {
     let node = new Node(value);
     let current;
-    if(!this.head){
-        this.head = node;
-      
-    }else{
-        current = this.head;
-        while(current.next){
-            current = current.next;
-        }
-        current.next = node;
-       
+    if (!this.head) {
+      this.head = node;
+    } else {
+      current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = node;
     }
     this.size++;
-}
-
+  }
 }
 
 const ll = new SLL();
 
-
 ll.insertFirst(300);
-ll.insertFirst(200)
-ll.insertLast(20 )
+ll.insertFirst(200);
+ll.insertLast(20);
 
 console.log(ll);
