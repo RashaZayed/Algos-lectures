@@ -51,3 +51,34 @@ const rGCF2 = (num1, num2) => {
   }
 };
 console.log(rGCF2(20000, 1000));
+
+//Tarai
+//tarai(x,y,z) == y, if x <= y (otherwise see rule #2);
+//tarai(x,y,z) == tarai(tarai(x-1,y,z),tarai(y-1,z,x),tarai(z-1,x,y)).
+//Calling tarai(10,2,9) should return 9 (after recursing 4145 times!).
+count=0;
+const tarai = (x,y,z)=> {
+ 
+  if (x <=y){
+    count++;
+    console.log(count)
+    return y;
+  }else {
+    count++;
+    console.log(count)
+    return tarai(tarai(x-1 , y , z), tarai(y-1 , z,x), tarai(z-1 , x,y))
+  }
+  
+}
+//count = 4145
+console.log(tarai(10,2,9))
+
+//Create strSubsets(str). Return an array with every possible in-order character subset of str.
+// The resultant array itself need not be in any specific order
+// – it is the subset of letters in each string that must be in the same order as they were in the original string.
+// Given "abc", return an array that includes ["", "c", "b", "bc", "a", "ac", "ab", "abc"] (in any order).
+// const strSubsets = (str)=> {
+//   for(let i=0;   str.length          ;i++){
+//     for(let j=0;   j<            ;j++)
+//   }
+// }
