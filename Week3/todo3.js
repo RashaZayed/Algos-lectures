@@ -77,8 +77,13 @@ console.log(tarai(10,2,9))
 // The resultant array itself need not be in any specific order
 // – it is the subset of letters in each string that must be in the same order as they were in the original string.
 // Given "abc", return an array that includes ["", "c", "b", "bc", "a", "ac", "ab", "abc"] (in any order).
-// const strSubsets = (str)=> {
-//   for(let i=0;   str.length          ;i++){
-//     for(let j=0;   j<            ;j++)
-//   }
-// }
+const strSubsets = (str)=> {
+  let newStrArr=[];
+  for(let i=0;   str.length          ;i++){
+    newStrArr[i]= str[i];
+    for(let j=i+1 ;   j<str.length            ;j++){
+      newStrArr[]
+
+    }
+  }
+}
